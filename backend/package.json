@@ -1,0 +1,26 @@
+{
+  "name": "technical-assessment-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API under test for the backend technical assessment (pactum + jest)",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "test:e2e": "jest -c jest.e2e.config.js --runInBand",
+    "test:e2e:happy": "npm run test:e2e -- -t \"@happy\"",
+    "test:e2e:neg": "npm run test:e2e -- -t \"@negative\"",
+    "test:e2e:example": "npm run test:e2e -- -t \"@example\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.10",
+    "jest": "^29.7.0",
+    "pactum": "^3.6.9",
+    "ts-jest": "^29.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
